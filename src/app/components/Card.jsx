@@ -12,7 +12,7 @@ function Card(props) {
             </div>
 
             <h1 className=' text-center m-[1.5rem]'>
-                <Link href={`./user/${props.user.id}`} className=' text-blue-500 block text-4xl font-semibold mb-4'>{`${props.user.nombre} ${props.user.apellido}`}</Link>
+                <Link href={`./user/profile/${props.user.id}`} className=' text-blue-500 block text-4xl font-semibold mb-4'>{`${props.user.nombre} ${props.user.apellido}`}</Link>
                 <span className=' block text-lg font-normal mb-2 text-slate-200'>Productos: {props.user.producto}</span>
                 <span className=' block text-lg font-normal mb-2 text-slate-200'>Turno: {props.user.turno}</span>
             </h1>
