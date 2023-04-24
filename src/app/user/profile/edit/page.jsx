@@ -1,5 +1,7 @@
 
 export default function edit(){
+    // Apartir de la sesion buscar el tipo de usuario
+    const type = 'user';
     return(
         <div className=" h-[120vh] max-sm:h-[145vh]">
             <div className=' bg-slate-950 w-[95%] px-8 py-12 translate-x-[-50%] translate-y-[-50%] absolute left-1/2 top-1/2 mt-24 mb-24 max-md:mt-52 rounded-2xl border-2 border-slate-800'>
@@ -30,32 +32,39 @@ export default function edit(){
                     </div>
 
                     
-                    <div className=' w-full grid grid-cols-form gap-y-5 gap-x-8 mb-5'>
-                        <div>
-                            <label htmlFor="productos" className=' text-blue-600 text-sm'>Productos</label>
-                            <select className=' bg-slate-900 text-slate-200 rounded-md w-full font-normal py-2 px-3 border-[1.2px] border-slate-500 mt-1 focus:outline-none focus:border-blue-500'  id="productos" name='productos'>
-                                <optgroup label='Escoge un tipo de productos'>
-                                    <option value="1">Comida</option>
-                                    <option value="2">Dulces</option>
-                                    <option value="3">Papelería</option>
-                                    <option value="4">Accesorios</option>
-                                    <option value="5">Libros</option>
-                                    <option value="6">Electrónica</option>
-                                    <option value="7">Otro</option>
-                                </optgroup>
-                            </select>
-                        </div>
-                        <div>
-                            <label htmlFor="horario" className=' text-blue-600 text-sm'>Horario</label>
-                            <select className=' bg-slate-900 text-slate-200 rounded-md w-full font-normal py-2 px-3 border-[1.2px] border-slate-500 mt-1 focus:outline-none focus:border-blue-500'  id="horario" name='horario'>
-                                <optgroup label='Escoge un horario'>
-                                    <option value="1">Matutino</option>
-                                    <option value="2">Vespertino</option>
-                                    <option value="3">Mixto</option>
-                                </optgroup>
-                            </select>
-                        </div>
-                    </div>
+                    { type === 'user' ? (
+                        <></>
+                    ) : (
+                        <>
+                            <div className=' w-full grid grid-cols-form gap-y-5 gap-x-8 mb-5'>
+                                <div>
+                                    <label htmlFor="productos" className=' text-blue-600 text-sm'>Productos</label>
+                                    <select className=' bg-slate-900 text-slate-200 rounded-md w-full font-normal py-2 px-3 border-[1.2px] border-slate-500 mt-1 focus:outline-none focus:border-blue-500'  id="productos" name='productos'>
+                                        <optgroup label='Escoge un tipo de productos'>
+                                            <option value="1">Comida</option>
+                                            <option value="2">Dulces</option>
+                                            <option value="3">Papelería</option>
+                                            <option value="4">Accesorios</option>
+                                            <option value="5">Libros</option>
+                                            <option value="6">Electrónica</option>
+                                            <option value="7">Otro</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label htmlFor="horario" className=' text-blue-600 text-sm'>Horario</label>
+                                    <select className=' bg-slate-900 text-slate-200 rounded-md w-full font-normal py-2 px-3 border-[1.2px] border-slate-500 mt-1 focus:outline-none focus:border-blue-500'  id="horario" name='horario'>
+                                        <optgroup label='Escoge un horario'>
+                                            <option value="1">Matutino</option>
+                                            <option value="2">Vespertino</option>
+                                            <option value="3">Mixto</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                        </>
+                    )
+                    }
 
                     <div className=' w-full grid grid-cols-form gap-y-5 gap-x-8 mb-5'>
                         <div>
@@ -68,14 +77,20 @@ export default function edit(){
                         </div>
                     </div>
 
-                    <div className=' w-full grid grid-cols-form gap-y-5 gap-x-8 mb-5'>
-                        <div>
-                            <label htmlFor="descripcion" className=' text-blue-600 text-sm'>Descripción</label>
-                            <textarea rows="6" className=' bg-slate-900 text-slate-200 rounded-md resize-none w-full font-normal py-2 px-3 border-[1.2px] border-slate-500 mt-1 focus:outline-none focus:border-blue-500' form="" id="descripcion" name="descripción" placeholder="Descripción" defaultValue={''}>
+                    { type === 'user' ? (
+                        <></>
+                    ) : (
+                        <>
+                            <div className=' w-full grid grid-cols-form gap-y-5 gap-x-8 mb-5'>
+                                <div>
+                                    <label htmlFor="descripcion" className=' text-blue-600 text-sm'>Descripción</label>
+                                    <textarea rows="6" className=' bg-slate-900 text-slate-200 rounded-md resize-none w-full font-normal py-2 px-3 border-[1.2px] border-slate-500 mt-1 focus:outline-none focus:border-blue-500' form="" id="descripcion" name="descripción" placeholder="Descripción" defaultValue={''}>
 
-                            </textarea>
-                        </div>
-                    </div>
+                                    </textarea>
+                                </div>
+                            </div>
+                        </>
+                    )}
 
                     <div className=' w-full grid grid-cols-form gap-y-5 gap-x-8 mb-5'>
                         <div>
