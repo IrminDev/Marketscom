@@ -25,12 +25,6 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href={'./admin/profile'} className="flex transition ease-linear flex-col items-center gap-y-1 font-[600] text-slate-400 md:hover:text-blue-500">
-                            <FaUserAlt className=" text-[1.5rem] md:hidden" />
-                            <span className=" text-[0.625rem] max-[320px]:hidden md:text-lg">Perfil</span>
-                        </Link>
-                    </li>
-                    <li>
                         <Link href={'./'} className="flex transition ease-linear flex-col items-center gap-y-1 font-[600] text-slate-400 md:hover:text-blue-500 ">
                             <IoMdExit className=" text-[1.5rem] md:hidden" />
                             <span className=" text-[0.625rem] max-[320px]:hidden md:text-lg">Cerrar sesión</span>

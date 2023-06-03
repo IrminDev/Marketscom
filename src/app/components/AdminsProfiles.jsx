@@ -4,7 +4,7 @@ import { BsCalendarFill, BsTagsFill } from 'react-icons/Bs'
 import { GrMail } from 'react-icons/gr'
 import { MdSchool } from 'react-icons/md'
 
-const Profile = (props) => {
+const AdminsProfiles = (props) => {
   return (
     <>
       <div className=' text-slate-400 mt-[3rem]'>
@@ -33,7 +33,7 @@ const Profile = (props) => {
                       <div className=' flex flex-col'>
                           {props?.owner === 'on' ? (
                             <>
-                              <Link className=' font-semibold text-center border-2 border-blue-500 p-[10px] w-full cursor-pointer rounded-sm bg-blue-500 text-lg my-5 mx-2 mb-[40px] transition ease-linear text-slate-200 hover:bg-slate-200 hover:text-blue-500' href={'/user/chat'}>
+                              <Link className=' font-semibold text-center border-2 border-blue-500 p-[10px] w-full cursor-pointer rounded-sm bg-blue-500 text-lg my-5 mx-2 mb-[40px] transition ease-linear text-slate-200 hover:bg-slate-200 hover:text-blue-500' href={'/admin/chat'}>
                                 Chat
                               </Link>
                               <Link className=' font-semibold text-center border-2 border-blue-500 p-[10px] w-full cursor-pointer rounded-sm bg-blue-500 text-lg my-5 mx-2 mb-[40px] transition ease-linear text-slate-200 hover:bg-slate-200 hover:text-blue-500' href={'./'}>
@@ -42,11 +42,8 @@ const Profile = (props) => {
                             </>
                           ) : (
                             <>
-                              <Link className=' font-semibold text-center border-2 border-blue-500 p-[10px] w-full cursor-pointer rounded-sm bg-blue-500 text-lg my-5 mx-2 mb-[40px] transition ease-linear text-slate-200 hover:bg-slate-200 hover:text-blue-500' href={`./user/chat/${props.user.id}`}>
+                              <Link className=' font-semibold text-center border-2 border-blue-500 p-[10px] w-full cursor-pointer rounded-sm bg-blue-500 text-lg my-5 mx-2 mb-[40px] transition ease-linear text-slate-200 hover:bg-slate-200 hover:text-blue-500' href={`./admin/chat/${props.user.id}`}>
                                 Chat
-                              </Link>
-                              <Link className=' font-semibold text-center border-2 border-blue-500 p-[10px] w-full cursor-pointer rounded-sm bg-blue-500 text-lg my-5 mx-2 mb-[40px] transition ease-linear text-slate-200 hover:bg-slate-200 hover:text-blue-500' href={`./user/report/${props.user.id}`}>
-                                Reportar
                               </Link>
                             </>
                           )
@@ -96,4 +93,4 @@ const Profile = (props) => {
   )
 }
 
-export default Profile
+export default AdminsProfiles
