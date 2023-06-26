@@ -24,7 +24,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className=" flex items-center h-[100vh] min-h-[500px] bg-escom bg-no-repeat bg-center">
+      <div className=" flex items-center h-[100vh] min-h-[500px] bg-escom bg-no-repeat bg-cover bg-center">
         <div className=' px-10'>
           <h1 className=' text-5xl mb-10 '>¡Bienvenido a marketscom!</h1>
           <p className=' text-xl mb-10'>Martketscom es una plataforma de compra y venta desarrollada para facilitar la comunicación entre alumnos de la ESCOM.</p>
