@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import { BsCalendarFill, BsTagsFill } from 'react-icons/Bs'
 import { GrMail } from 'react-icons/gr'
 import { MdSchool } from 'react-icons/md'
 
@@ -26,8 +25,8 @@ const Profile = (props) => {
                         </>
                       ) : (
                         <>
-                          <p className=' mb-[10px] text-xl text-slate-300 max-md:text-center flex items-center'><BsTagsFill className=' mr-2' />{props.user.producto}</p>
-                          <p className=' mb-[10px] text-xl text-slate-300 max-md:text-center flex items-center'><BsCalendarFill className=' mr-2' />{props.user.turno}</p>
+                          <p className=' mb-[10px] text-xl text-slate-300 max-md:text-center flex items-center'><MdSchool className=' mr-2' />{props.user.producto}</p>
+                          <p className=' mb-[10px] text-xl text-slate-300 max-md:text-center flex items-center'><GrMail className=' mr-2' />{props.user.turno}</p>
                         </>
                       )}
                       <div className=' flex flex-col'>
